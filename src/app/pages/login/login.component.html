@@ -1,0 +1,10 @@
+<section class="p-5">
+    <div class="header-login">
+        <h2 class="text-center">Log in</h2>
+    </div>
+    <app-login-form (onSubmitEmitter)="validateLogin($event)" />
+</section>
+
+@if (errorMessage) {
+    <app-modal-message title="Error" [message]="errorMessage" (onCloseModalEmitter)="closeErrorMessage()" />
+}

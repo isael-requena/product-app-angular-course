@@ -1,0 +1,17 @@
+<section class="p-2">
+    <!-- <div class="p-5">
+        <h1 class="text-center">Estoy en home!</h1>
+        <button class="btn btn-secondary w-100" (click)="logout()">
+            Log out
+        </button>
+    </div> -->
+
+    <app-header />
+    <div class="product-cards-container">
+        @for (product of allProducts; track product.id) {
+        <div class="product-container">
+            <app-product-card [product]="product"></app-product-card>
+        </div>
+        }
+    </div>
+</section>

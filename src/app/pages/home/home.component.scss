@@ -1,0 +1,15 @@
+.product-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    width: 100%;
+    gap: 2rem;
+    margin: auto;
+
+    .product-container {
+        margin: auto;
+        
+        app-product-card {
+            width: fit-content;
+        }
+    }
+}

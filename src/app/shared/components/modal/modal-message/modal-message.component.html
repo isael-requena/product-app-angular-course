@@ -1,0 +1,17 @@
+<!-- @if (showModal) { -->
+    <section class="modal-class-container" [ngClass]="{'hide-modal': !showModal}">
+        <div class="modal-customized">
+            <button class="close-btn" (click)="closeModal()">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+            <header>
+                <h2>{{ title }}</h2>
+            </header>
+            <div class="modal-content">
+                <p>{{ message }}</p>
+            </div>
+        </div>
+    </section>
+<!-- } -->

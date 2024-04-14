@@ -1,0 +1,51 @@
+.modal-class-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    background: rgba(0, 0, 0, .4);
+    transition: all .4s ease-in-out;
+
+    .modal-customized {
+        background: white;
+        height: fit-content;
+        padding: 2rem;
+        border-radius: 19px;
+        animation: init-modal .5s ease-in-out;
+
+        .close-btn {
+            float: right;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 0;
+            width: 2rem;
+            height: 2rem;
+
+            &:hover, &:focus, &:active {
+                background-color: #ebe9e9;
+            }
+
+            span {
+                background: white;
+            }
+        }
+    }
+}
+.hide-modal {
+    opacity: 0;
+}
+@keyframes init-modal {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
